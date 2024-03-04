@@ -122,12 +122,14 @@
         }
 
         onCustomWidgetBeforeUpdate(changedProperties) {
+            console.log('BeforeUpdate() called');
             this._props = { ...this._props, ...changedProperties };
         }
 
 
 
         onCustomWidgetAfterUpdate(changedProperties) {
+            console.log('AfterUpdate() called');
             if ("decimalPlaces" in changedProperties) {
                 this._decimalPlaces = changedProperties["decimalPlaces"];
             }
